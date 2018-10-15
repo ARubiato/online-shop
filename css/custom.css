@@ -11,16 +11,15 @@
 }
 
 
+.custom-body{
+    background-image:url('img/architect.jpg') !important;
+    background-size:cover;
+}
+
 textarea {
 	resize: none !important;
 }
 
 textarea {
    resize: none;
-}
-
-.body-bg{
-    background:url(img/architect.jpg) no-repeat !important;
-    padding-top:100px;
-    background-size:cover;
 }
