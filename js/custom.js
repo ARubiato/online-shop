@@ -1,13 +1,18 @@
 function confirmPass() {
-    var pwd = document.getElementById("pwd").value;
+    var pwd = document.getElementById("u_pwd").value;
     var cu_pwd = document.getElementById("cu_pwd").value;
-    var ok = true;
+
     if(pwd != cu_pwd) {
         alert("Password does not match!");
-        ok = false;
+        return false;
     } else {
-        alert("Password matches!");
+       if(pwd.length < 6) {
+           alert("Password is too short!");
+           return false;
+       } else {
+           alert("Account created!");
+       }
     }
 
-    return ok;
+
 }
