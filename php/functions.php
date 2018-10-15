@@ -5,13 +5,12 @@ if(isset($_POST['register-user'])) {
 
     $u_name = (isset($_POST['u_name'])) ? $_POST['u_name'] : "";
     $u_pwd = (isset($_POST['u_pwd'])) ? $_POST['u_pwd'] : "";
-    $cu_pwd = (isset($_POST['cu_pwd'])) ? $_POST['cu_pwd'] : "";
+    
+    $hash_pwd =password_hash($u_pwd,PASSWORD_DEFAULT);
+    
+    $sql = "INSERT INTO user-cred (u_name,u_pwd) VALUE ('$u_name',$u_pwd");
 
-    if($u_pwd!=$cu_pwd) {
-        
-    } else {
-        echo "password matches!";
-    }
+    
 
 
 }
