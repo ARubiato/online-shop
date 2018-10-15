@@ -22,15 +22,15 @@ require 'includes/bootstrap.php';
                 <hr>
                </div>
                 <div class = "form-group">
-                    <input type = "text" class = "form-control" placeholder = "Username" name = "u_name">
+                    <input type = "text" class = "form-control" placeholder = "Username" name = "u_name" id = "u_name">
                 </div>
 
                 <div class=  "form-group">
-                    <input type = "password" class = "form-control" placeholder = "Password" name = "u_pwd">
+                    <input type = "password" class = "form-control" placeholder = "Password" name = "u_pwd" id = "u_pwd">
                 </div>
 
                 <div class = "form-group">
-                    <input type = "password" class = "form-control" placeholder = "Confirm password" name = "cu_pwd">
+                    <input type = "password" class = "form-control" placeholder = "Confirm password" name = "cu_pwd" id = "cu_pwd">
                 </div>
                 
                 <div class = "form-group">
