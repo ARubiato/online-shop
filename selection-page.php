@@ -9,33 +9,35 @@ require 'includes/bootstrap.php';
     <title>Select</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<div class = "body-bg">
+<body class = "custom-body">
     <div class = "container-fluid">
         <div class = "card mt-10 mr-10 ml-10">
             <div class = "card-body">
-
+            
+                <form method = "post" action = "php/redirect.php">
                 <div class = "row">
 
                     <div class = "col">
+                        <div class = "form-group ml-10">
                         <h4 class = "display-4" align = "center">Want to create an online shop for your store?</h4>
+                        </div>
                     </div>
                     
                     <div class = "col">
-                        <div class = "form-group mt-2">
+                        <div class = "form-group mt-2 ml-10">
                             <h4 class = "display-4">Take action</h4>
                         </div>
-                        <div class = "form-group">
-                        <button class = "btn btn-outline-dark btn-lg" type = "submit">Create account</button>
+                        <div class = "form-group ml-10">
+                        <button class = "btn btn-outline-dark btn-lg" type = "submit" name = "redirect-create">Create account</button>
                         <button class = "btn btn-outline-dark btn-lg" type = "submit">Login</button>
                         </div>
                     </div>
-
+            
                 </div>
+                </form>
 
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
