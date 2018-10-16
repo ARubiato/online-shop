@@ -19,7 +19,7 @@ require 'includes/bootstrap.php';
 
                     <div class = "col">
                         <div class = "form-group ml-10">
-                        <h4 class = "display-4" align = "center">Want to create an online shop for your store?</h4>
+                        <h4 class = "display-4" align = "center">Want to create an online presence for your store?</h4>
                         </div>
                     </div>
                     
@@ -29,7 +29,7 @@ require 'includes/bootstrap.php';
                         </div>
                         <div class = "form-group ml-10">
                         <button class = "btn btn-outline-dark btn-lg" type = "submit" name = "redirect-create">Create account</button>
-                        <button class = "btn btn-outline-dark btn-lg" type = "submit">Login</button>
+                        <button class = "btn btn-outline-dark btn-lg" type = "submit" name = "redirect-login">Login</button>
                         </div>
                     </div>
             
