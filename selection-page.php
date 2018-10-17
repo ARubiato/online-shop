@@ -19,7 +19,7 @@ require 'includes/bootstrap.php';
 
                     <div class = "col">
                         <div class = "form-group ml-10">
-                        <h4 class = "display-4" align = "center">Want to create an online presence for your store?</h4>
+                        <h4 class = "display-4" align = "center">Are you a shop owner wanting to create an online presence for your store?</h4>
                         </div>
                     </div>
                     
