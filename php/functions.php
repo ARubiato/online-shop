@@ -18,8 +18,8 @@ session_start();
     if(isset($_POST['u_name']) and isset($_POST['u_pwd'])) {
         $u_name = $_POST['u_name'];
         $u_pwd = $_POST['u_pwd'];
-
-        $sql = "SELECT * FROM user-cred WHERE u_name = '$u_name'";
+    
+        $sql = "SELECT * FROM `user-cred` WHERE u_name = '$u_name'";
         $res = mysqli_query($conn,$sql);
         $data = mysqli_fetch_array($res);
 
