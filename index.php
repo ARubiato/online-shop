@@ -1,6 +1,6 @@
 <?php
 require 'includes/header.php';
-
+require 'php/session.php';
 ?>
 <!DOCTYPE html>
 <html>
