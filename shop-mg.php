@@ -1,4 +1,4 @@
-<?php
+z<?php
 require 'includes/header.php';
 require 'php/session.php'
 ?>
@@ -18,8 +18,21 @@ require 'php/session.php'
      <div class = "card mt-10 mr-10 ml-10">
             <div class = "card-body">
             <div class = "form-group">
+            <?php 
+            $sql = "SELECT us_id FROM `user-shop`";
+            $res = mysqli_query($conn,$sql);
+            $count = mysqli_num_rows($res);
+            if($count > 0) 
+            {
+            ?>
                 <p class = "display-4" align = "center">You don't have a shop running yet!</p>
             </div>
+
+            <?php } else {?>
+                
+                <?php echo "test";?>
+
+            <?php }?>
         <form method = "post" action = "php/redirect.php">
             <div class = "form-group mt-5 col-md-12 text-center">
                 <button class = "btn btn-outline-dark" name = "create-shop">Create Shop</button>

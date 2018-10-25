@@ -22,7 +22,7 @@ require 'php/session.php';
                     <a class = "nav-link" href = "index.php">Home</a>
                 </li>
                 <li class = "nav-item">
-                <a class = "nav-link" href = "shop-mg.php">Shop Management</a>
+                <a class = "nav-link"  href = "shop-mg.php">Shop Management</a>
                 </li>
                 <li class = "nav-item">
                 <a class = "nav-link" href = "deliv-mg.php">Manage Deliveries</a>
