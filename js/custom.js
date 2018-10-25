@@ -13,6 +13,10 @@ function confirmPass() {
            alert("Account created!");
        }
     }
+}
 
+function signout() {
 
+    alert("Successfully logged out");
+    
 }
