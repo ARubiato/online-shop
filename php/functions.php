@@ -1,5 +1,6 @@
 <?php
 require 'db-config.php';
+require 'session.php';
 
 if(isset($_POST['register-user'])) {
 $u_name = isset($_POST['u_name']) ? $_POST['u_name'] : "";
@@ -12,7 +13,6 @@ header('location:../selection-page.php');
 }
 
 if(isset($_POST['login-user'])) {
-    
 session_start();
 
     if(isset($_POST['u_name']) and isset($_POST['u_pwd'])) {
@@ -29,13 +29,30 @@ session_start();
             header('location: ../index.php');
 
         } else {
-            Echo "Password does not match";
+            Echo "Account does not exist or password does not match";
         }
 
     } else {
         Echo "login failed";
     }
 
+}
+
+
+if(isset($_POST['create-shop'])) {
+
+    $us_sn = isset($_POST['us_sn']) ? $_POST['us_sn'] : "";
+    $us_fn = isset($_POST['us_fn']) ? $_POST['us_fn'] : "";
+    $us_address = isset($_POST['us_address']) ? $_POST['us_address'] : "";
+    $us_email = isset($_POST['us_email']) ? $_POST['us_email'] : "";
+
+    $sql = "INSERT INTO `user-shop` (u_id,us_fn,us_sn,us_address,us_email) VALUES ('$u_id','$us_fn','$us_sn','$us_address','$us_email'";
+    mysqli_query($conn,$sql);
+
+    
+
+    header('location:../index.php');
+    
 }
 
 ?>
