@@ -24,6 +24,12 @@ require 'php/session.php';
                 <li class = "nav-item">
                 <a class = "nav-link" href = "shop-mg.php">Shop Management</a>
                 </li>
+                <li class = "nav-item">
+                <a class = "nav-link" href = "deliv-mg.php">Manage Deliveries</a>
+                </li>
+                <li class = "nav-item">
+                <a class = "nav-link" href = "trans-mg.php">Transactions</a>
+                </li>
             </ul>
 
             <form class = "form-inline my-2 my-lg-0">
@@ -39,11 +45,13 @@ require 'php/session.php';
                     <a class = "dropdown-item">Signed in as <?php echo $u_name;?></a>
                     <a class = "dropdown-item" href = "view-profile.php">View profile</a>
                     <div class = "dropdown-divider"></div>
-                    <a class = "dropdown-item btn btn-outline-danger" href = "php/session-exit.php">Sign out</a>
+                    <a class = "dropdown-item btn btn-outline-danger" href = "php/session-exit.php" onclick= "signout()">Sign out</a>
                 </div>
             </li>
            </ul>
          </div>
     </nav>
+
+    <script src = "js/custom.js"></script>
 </body>
 </html>
