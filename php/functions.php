@@ -45,12 +45,10 @@ if(isset($_POST['create-shop'])) {
     $us_fn = isset($_POST['us_fn']) ? $_POST['us_fn'] : "";
     $us_address = isset($_POST['us_address']) ? $_POST['us_address'] : "";
     $us_email = isset($_POST['us_email']) ? $_POST['us_email'] : "";
-
-    $sql = "INSERT INTO `user-shop` (u_id,us_fn,us_sn,us_address,us_email) VALUES ('$u_id','$us_fn','$us_sn','$us_address','$us_email'";
+    echo $us_fn;
+    $sql = "INSERT INTO `user-shop` (u_id,us_fn,us_sn,us_address,us_email) VALUES ('$u_id','$us_fn','$us_sn','$us_address','$us_email')";
     mysqli_query($conn,$sql);
-
     
-
     header('location:../index.php');
     
 }
