@@ -17,6 +17,4 @@ function confirmPass() {
 
 function signout() {
 
-    alert("Successfully logged out");
-    
 }
