@@ -1,4 +1,5 @@
-z<?php
+
+<?php
 require 'includes/header.php';
 require 'php/session.php'
 ?>
@@ -19,25 +20,40 @@ require 'php/session.php'
             <div class = "card-body">
             <div class = "form-group">
             <?php 
-            $sql = "SELECT us_id FROM `user-shop`";
+            $sql = "SELECT u_id FROM `user-shop` WHERE u_id = '$u_id'";
             $res = mysqli_query($conn,$sql);
             $count = mysqli_num_rows($res);
-            if($count > 0) 
+
+            if($count == 0) 
             {
             ?>
                 <p class = "display-4" align = "center">You don't have a shop running yet!</p>
             </div>
-
-            <?php } else {?>
-                
-                <?php echo "test";?>
-
-            <?php }?>
-        <form method = "post" action = "php/redirect.php">
+            
+            <form method = "post" action = "php/redirect.php">
             <div class = "form-group mt-5 col-md-12 text-center">
                 <button class = "btn btn-outline-dark" name = "create-shop">Create Shop</button>
                 </form>
+            
+            <?php } else { ?>
+            <?php 
+                $sql1 = "SELECT * FROM `user-shop` WHERE u_id = '$u_id'";
+                $res = mysqli_query($conn,$sql1);
+                $data = mysqli_fetch_array($res)
+            ?>
+                <form method = "post" action = "#">
+                    <h5>Store Owner : <?php echo $data['us_fn'];?></h5>
+                    <h5>Store Name : <?php echo $data['us_sn'];?></h5>
+                    <h5>Address : <?php echo $data['us_address'];?></h5>
+                    <h5>Email : <?php echo $data['us_email'];?></h4>
+                </form>
+
+            <?php }?>
+      
             </div>
+                <div class = "form-group">
+                <button class = "btn btn-outline-dark" name = "manage-del">Manage Deliveries</button>
+                </div>
             </div>
         </div>
     
